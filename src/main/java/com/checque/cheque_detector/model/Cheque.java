@@ -1,6 +1,8 @@
 // model/Cheque.java
 package com.checque.cheque_detector.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,4 +25,6 @@ public class Cheque {
     private String status; // e.g., "PENDING", "GENUINE", "FRAUD"
     private String signatureMatch; // YES/NO
     private String forgeryDetected; // YES/NO
+    @Column(name = "image_path")
+    private String imagePath;
 }
